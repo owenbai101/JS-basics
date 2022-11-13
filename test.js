@@ -1,15 +1,13 @@
-const bigCircle ={
-    radius : 5,
-    drawNow(){
-        console.log('draw');
-    }
-} ;
+const colors =['red','green','blue'];
 
-for(let key of Object.keys(bigCircle))
-    console.log(key);
+for(let index in colors)
+{
+    console.log(index,colors[index]);
+}
 
-for(let value of Object.values(bigCircle))
-    console.log(value);
+// for of
 
-for(let entrie of Object.entries(bigCircle))
-console.log(entrie);
+for (let color of colors)
+{
+    console.log(color);
+}
