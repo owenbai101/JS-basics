@@ -1,3 +1,3 @@
-const numbers =[3,4];
-numbers =[];
-console.log(numbers);
+const numberArray =[1,2,3]
+const joined = numberArray.join('abc');
+console.log(joined)
