@@ -132,3 +132,51 @@ console.log(parts);
 
 const combined = parts.join('-');
 console.log(combined);
+
+ //--------------------------------------------------------------------------------------
+// sort Arrays
+
+const sortnumber =[2,3,1];
+sortnumber.sort();
+console.log(sortnumber);
+
+sortnumber.reverse();
+console.log(sortnumber);
+
+const courses2 = [
+    {id:1,name:'Node.js'},
+    {id:2,name:'javaScript'},
+];
+
+courses2.sort(function(a,b){
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+    if(nameA < nameB) return -1;
+    if(nameA > nameB) return 1;
+    return 0;
+})
+
+console.log(courses2);
+
+ //--------------------------------------------------------------------------------------
+// testing Arrays
+
+const testNumber =[1,2,3];
+const allPositive = testNumber.every(function(value){
+    return value >= 0;
+});
+
+const atLeastOnePositive = testNumber.some(function(value){
+    return value >= 0;
+});
+
+ //--------------------------------------------------------------------------------------
+// filter Arrays
+const FilterNumbers =[1,-1,2,4];
+
+const filtered = FilterNumbers.filter(value => value >=0);
+
+console.log(filtered);
+
+ //--------------------------------------------------------------------------------------
+// mapping Arrays
