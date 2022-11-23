@@ -180,3 +180,31 @@ console.log(filtered);
 
  //--------------------------------------------------------------------------------------
 // mapping Arrays
+
+const items = filtered.map(n => '<li>' + n + '</li>')
+const html = '<ul>' + items.join('') + '</ul>';
+console.log(html);
+console.log(items);
+
+
+const objItems =filtered.map(n => {
+    return {value: n};
+})
+
+console.log(objItems);
+
+
+//--------------------------------------------------------------------------------------
+// reducing array
+
+const cost = [ 2,4,6];
+
+let sum = 0;
+for( let n of cost)
+    sum += n;
+
+console.log(sum);
+
+const sum2 = cost.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+},0); 
