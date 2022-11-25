@@ -1,14 +1,13 @@
-const courses2 = [
-    {id:1,name:'Node.js'},
-    {id:2,name:'javaScript'},
-];
+function except(array, excluded)
+{
+    const output = [];
+    for(let element of array)
+        if(!excluded.includes(element))
+            output.push(element);
+}
 
-courses2.sort(function(a,b){
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
-    if(nameA < nameB) return -1;
-    if(nameA > nameB) return 1;
-    return 0;
-})
+let array1 =[1,3,5,4,3];
 
-console.log(courses2);
+const output = except(array1,[3]);
+
+console.log(output);
