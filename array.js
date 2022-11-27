@@ -208,3 +208,4 @@ console.log(sum);
 const sum2 = cost.reduce((accumulator, currentValue) => {
     return accumulator + currentValue;
 },0); 
+
