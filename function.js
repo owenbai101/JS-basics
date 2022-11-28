@@ -44,3 +44,44 @@ console.log(sum(1,3,5));
 function sum2(...args){
     return args.reduce((a,b) => a + b)
 }
+
+//--------------------------------------------------------------
+//Default Parameters
+
+
+function interest(principal, rate =3.5,years = 5){
+    // rate = rate || 3.5;
+    // years = years|| 5;
+    return principal*rate/100* years;
+}
+
+
+//--------------------------------------------------------------
+//getter and setter
+
+const person ={
+    firstName : 'Mosh',
+    lastName : 'owen',
+    get fullName(){ return `${person.firstName} ${person.lastName}`},
+    set fullName(value){
+        if(typeof value !== 'string')
+            throw new Error('value is not a string.');
+        const parts = value.split(' ');
+        if (parts.length !=2)
+            throw new Error('Enter a first and last name')
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+
+try{
+    person.fullName= '';
+}
+catch (e){
+    alert(e);
+}
+
+console.log(person);
+
+// getters => access properties
+//setter => change the properties
