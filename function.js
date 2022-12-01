@@ -85,3 +85,9 @@ console.log(person);
 
 // getters => access properties
 //setter => change the properties
+
+
+//--------------------------------------------------------------
+//scope
+
+
